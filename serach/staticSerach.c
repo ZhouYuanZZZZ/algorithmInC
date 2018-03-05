@@ -1,6 +1,6 @@
 #include "../common/utils.h"
 
-//平均时间复杂度n/2
+//顺序查找平均时间复杂度n/2
 int seqSerach(int p[],int len ,int elem) {
     for (int i = 0; i <len ; i++) {
         if(elem == p[i]){
@@ -10,6 +10,7 @@ int seqSerach(int p[],int len ,int elem) {
     return -1;
 }
 
+//二分法查找,时间复杂度为log2n
 int binarySerach(int p[],int len ,int elem){
     int low = 0;
     int high = len - 1; //定义上下界

@@ -31,9 +31,9 @@ void binaryInsertSort(int p[], int len) {
         while (low <= hign) {
             m = (low + hign) / 2;
             if (temp < p[m]) {
-                hign = m - 1;
+                hign = m - 1;  //在有序序列前半部分寻找插入位置
             } else{
-                low = m+1;
+                low = m+1;    //在有序序列后半部分寻找插入位置
             }
         }
 
@@ -61,9 +61,9 @@ void shellSort(int p[], int len, int dlta[], int dltaLen) {
 //一趟shell排序,时间复杂度为n1.5
 void shellSortSingle(int p[], int len, int dk) {
     int temp;
-    for(int i=dk;i<len;i++){//dk 为待排序序列索引
+    for(int i=dk;i<len;i++){//dk 为第一个子序列待排序序列索引
         temp = p[i];
-        int j = i-dk;       //j为子序列中待排序元素前边的元素
+        int j = i-dk;       //j为子序列中有序序列最后一个元素
         while(j>=0 && p[j]>temp){    //找到待插入的位置,并且移动元素
             p[j+dk] = p[j];           //待排序元素的位置空余出来,移动元素
             j = j-dk;

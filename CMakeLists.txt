@@ -7,4 +7,5 @@ add_executable(algorithmInC
         common/utils.c main0.c
         sort/insertSort/insertSort.c
         common/utils.h
-        serach/staticSerach.c sort/swapSort/swapSort.c)
+        serach/staticSerach.c
+        sort/swapSort/swapSort.c)
