@@ -8,4 +8,4 @@ add_executable(algorithmInC
         sort/insertSort/insertSort.c
         common/utils.h
         serach/staticSerach.c
-        sort/swapSort/swapSort.c)
+        sort/swapSort/swapSort.c dataStruct/map/graphDef.c)
