@@ -10,7 +10,8 @@ add_executable(algorithmInC
         common/utils.h
         serach/staticSerach.c
         sort/swapSort/swapSort.c
-#        dataStruct/graph/basic/dg/list_dg.c
-#        dataStruct/graph/basic/dg/matrix_dg.c
-        dataStruct/graph/basic/udg/list_udg.c
-        dataStruct/graph/basic/udg/matrix_udg.c)
+        dataStruct/graph/basic/dg/list_dg.c
+        dataStruct/graph/basic/dg/matrix_dg.c
+#        dataStruct/graph/basic/udg/list_udg.c
+#        dataStruct/graph/basic/udg/matrix_udg.c
+        )
