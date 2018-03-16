@@ -162,13 +162,88 @@ void print_graph(Graph G) {
     }
 }
 
-void mainMdg() {
+/*
+ * 返回顶点v的第一个邻接顶点的索引，失败则返回-1
+ */
+static int first_vertex(Graph G, int v) {
+    int i;
+
+    if (v < 0 || v > (G.vexnum - 1)) {
+        return -1;
+    }
+
+    for (i = 0; i < G.vexnum; i++) {
+        if (G.matrix[v][i] == 1) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+/*
+ * 返回顶点v相对于w的下一个邻接顶点的索引，失败则返回-1
+ */
+static int next_vertix(Graph G, int v, int w) {
+    int i;
+
+    if (v < 0 || v > (G.vexnum - 1) || w < 0 || w > (G.vexnum - 1)) {
+        return -1;
+    }
+
+    for (i = w + 1; i < G.vexnum; i++) {
+        if (G.matrix[v][i] == 1) {
+            return i;
+        }
+    }
+    return -1;
+
+}
+
+/*
+ * 深度优先搜索遍历图的递归实现
+ */
+static void DFS(Graph G, int i, int *visited) {
+    int w;
+
+    visited[i] = 1;
+    printf("%c ", G.vexs[i]);
+    // 遍历该顶点的所有邻接顶点。若是没有访问过，那么继续往下走
+    for (w = first_vertex(G, i); w >= 0; w = next_vertix(G, i, w)) {
+        if (!visited[w]){
+            DFS(G, w, visited);
+        }
+    }
+
+}
+
+/*
+ * 深度优先搜索遍历图
+ */
+void DFSTraverse(Graph G) {
+    int i;
+    int visited[MAX];       // 顶点访问标记
+
+    // 初始化所有顶点都没有被访问
+    for (i = 0; i < G.vexnum; i++){
+        visited[i] = 0;
+    }
+
+    printf("DFS: ");
+    for (i = 0; i < G.vexnum; i++) {
+        if (!visited[i]){
+            DFS(G, i, visited);
+        }
+    }
+    printf("\n");
+}
+
+void main() {
     Graph *pG;
 
     // 自定义"图"(输入矩阵队列)
     //pG = create_graph();
     // 采用已有的"图"
     pG = create_example_graph();
-
     print_graph(*pG);       // 打印图
+    DFSTraverse(*pG);       // 深度优先遍历
 }

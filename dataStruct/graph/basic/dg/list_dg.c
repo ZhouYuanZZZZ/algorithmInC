@@ -206,7 +206,7 @@ void print_lgraph(LGraph G) {
     }
 }
 
-void main() {
+void mainlist() {
     LGraph *pG;
 
     // 自定义"图"(自己输入数据)
