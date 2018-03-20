@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <malloc.h>
 #include "utils.h"
 int * generalRandomIntArray(int len, int max) {
     int * a = (int*)malloc(sizeof(int) * len);
