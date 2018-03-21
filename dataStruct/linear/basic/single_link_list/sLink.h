@@ -5,6 +5,8 @@
 
 
 #include <malloc.h>
+
+
 // 单向链表的“节点”
 typedef struct SNode {
     int data;
@@ -25,10 +27,26 @@ void createLinkedListFromHead(SL L,int a[],int len);
 //将单条数据头插法插入链表中
 void insertDataIntoListHead(SNode * head,int data);
 
+void createLinkedListFromTail(SL L,int a[],int len);
 
 SNode * insertDataIntoListTail(SNode * tail,int data);
 
+//按序号查找元素
+int getElemByIndex(SL L,int index);
+
+//按值查找
+int getIndexByElem(SL L,int elem);
+
 void showSLinkedList(SL L);
+
+//求单链表的长度
+int getListLength(SL L);
+
+//在单链表中插入元素
+int insertElem(SL L,int index,int elem);
+
+//单链表的删除操作
+int removeElem(SL L,int index);
 
 
 
