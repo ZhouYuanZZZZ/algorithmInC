@@ -16,4 +16,5 @@ add_executable(algorithmInC
 #        dataStruct/graph/basic/udg/matrix_udg.c
         dataStruct/linear/basic/single_link_list/sLink.c
         dataStruct/linear/basic/single_link_list/sLink.h
-        dataStruct/linear/basic/single_link_list/sLinkTest.c)
+        dataStruct/linear/basic/single_link_list/sLinkTest.c
+        test/test.c dataStruct/linear/basic/sequenceList/sList.h dataStruct/linear/basic/sequenceList/sList.c.c)

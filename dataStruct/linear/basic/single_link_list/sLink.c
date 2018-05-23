@@ -166,3 +166,38 @@ int removeElem(SL L,int index){
     free(item);
 
 }
+
+SL mergeLinkList(SL L1,SL L2){
+    SNode *pa , *pb ,*tailL3;
+    SL L3 = createLinkedList();
+
+    tailL3 = L3;
+    pa=L1->next;
+    pb=L2->next;
+
+    while (pa != NULL && pb != NULL) {
+        if (pa->data <= pb->data) {
+            tailL3->next = pa;
+            tailL3 = pa;
+            pa = pa->next;
+        }else{
+            tailL3->next = pb;
+            tailL3 = pb;
+            pb = pb->next;
+        }
+    }
+
+    if (pa != NULL) {
+        tailL3->next = pa;
+    }
+
+    if (pb != NULL) {
+        tailL3->next = pb;
+    }
+
+    free(L1);
+    free(L2);
+
+    return L3;
+
+}

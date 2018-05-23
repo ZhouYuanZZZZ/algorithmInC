@@ -1,23 +1,21 @@
 #include "../../../../common/utils.h"
 #include "sLink.h"
-int main(){
+int main6(){
 
     SL L1 = createLinkedList();
     SL L2 = createLinkedList();
-    int* a = generalRandomIntArray(20,5);
-    createLinkedListFromHead(L1,a,5);
-    createLinkedListFromTail(L2,a,5);
+
+    int a1[] = {1,3,5,7,9};
+    int a2[] = {2,4,6,8,10,11,12,13};
+
+    createLinkedListFromTail(L1,a1,5);
+    createLinkedListFromTail(L2,a2,8);
+
     showSLinkedList(L1);
     showSLinkedList(L2);
 
-    printf("%d\n",getIndexByElem(L1,4));
-    printf("%d\n",getListLength(L1));
-
-    insertElem(L2,5,6666);
-    showSLinkedList(L2);
-
-    removeElem(L2,5);
-    showSLinkedList(L2);
+    SL L3 = mergeLinkList(L1,L2);
+    showSLinkedList(L3);
     return 0;
 }
 

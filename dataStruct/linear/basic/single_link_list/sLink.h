@@ -48,6 +48,9 @@ int insertElem(SL L,int index,int elem);
 //单链表的删除操作
 int removeElem(SL L,int index);
 
+//按元素从小到大的顺序合并两个单链表
+SL mergeLinkList(SL L1,SL L2);
+
 
 
 #endif
