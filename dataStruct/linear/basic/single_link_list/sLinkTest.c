@@ -19,7 +19,7 @@ int main(){
 
     SL L1 = createLinkedList();
     int a1[] = {1,3,5,7,9};
-    createLinkedListFromTail(L1,a1,8);
+    createLinkedListFromTail(L1,a1,5);
     showSLinkedList(L1);
     reverseSeqlinkedList(L1);
     showSLinkedList(L1);

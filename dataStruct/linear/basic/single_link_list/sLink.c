@@ -222,6 +222,9 @@ void reverseSeqlinkedList(SL L){
         L->next = node;
 
         node = nextNode;
-        nextNode = nextNode->next;
+        if(nextNode!=NULL){
+            nextNode = nextNode->next;
+        }
+
     }
 }
