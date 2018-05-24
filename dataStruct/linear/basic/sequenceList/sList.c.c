@@ -2,9 +2,12 @@
 #include "sList.h"
 
 //初始化
-SeqList *initEmptySeqList() {
-    SeqList *seqList = malloc(sizeof(SeqList));
+SeqList *initEmptySeqList(int size) {
+    SeqList* seqList = (SeqList* )malloc(sizeof(SeqList));
     seqList->loc = -1;
+
+    seqList->elem = (int* )malloc(sizeof(int)*size);
+
     return seqList;
 }
 
@@ -39,10 +42,50 @@ void insertSlist(SeqList* list,int elem,int loc){
     }
 
     *(list->elem+loc) = elem;
+
     list->loc++;
 }
 
-int main() {
+//更新指定位置的元素
+void updateSlist(SeqList* list,int elem,int loc){
+
+    *(list->elem+loc) = elem;
+}
+
+//删除元素
+void deleteSlist(SeqList* list,int loc){
+    for(int i=loc;i<=list->loc;i++){
+        *(list->elem+i-1) = *(list->elem+i);
+    }
+    list->loc--;
+}
+
+void displaySlist(SeqList* list){
+    printf("[");
+    for(int i=0;i<=list->loc;i++){
+        printf("%d ",*(list->elem+i));
+    }
+    printf("]\n");
+}
+
+int mainseqList() {
+
+   int *p = generalRandomIntArray(10,100);
+    SeqList * list = initEmptySeqList(10);
+
+    for(int i=0;i<10;i++){
+        insertSlist(list,*(p+i),i);
+    }
+    displaySlist(list);
+
+    insertSlist(list,666,2);
+    displaySlist(list);
+
+    updateSlist(list,777,2);
+    displaySlist(list);
+
+    deleteSlist(list,3);
+    displaySlist(list);
 
     return 0;
 }

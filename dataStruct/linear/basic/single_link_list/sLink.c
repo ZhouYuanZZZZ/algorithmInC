@@ -201,3 +201,27 @@ SL mergeLinkList(SL L1,SL L2){
     return L3;
 
 }
+
+void destroyLinkedList(SL L){
+    SNode node;
+    SNode* p = L->next;
+    while(p!=NULL){
+        node = *p;
+        free(p);
+        p = node.next;
+    }
+    free(L);
+}
+
+void reverseSeqlinkedList(SL L){
+    SNode* nextNode = L->next->next;
+    SNode* node = L->next;
+    L->next = NULL;
+    while(node!=NULL){
+        node->next = L->next;
+        L->next = node;
+
+        node = nextNode;
+        nextNode = nextNode->next;
+    }
+}
