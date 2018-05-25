@@ -1,6 +1,6 @@
 #include "../../../../common/utils.h"
 #include "sLink.h"
-int main(){
+int main22365(){
 
 //    SL L1 = createLinkedList();
 //    SL L2 = createLinkedList();
