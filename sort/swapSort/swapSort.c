@@ -46,7 +46,7 @@ int quickPass(int a[], int low, int high) {
     return low;
 }
 
-int main(){
+int main115(){
 
     int *p = generalRandomIntArray(20, 100);
     showIntArray1(p,20);
