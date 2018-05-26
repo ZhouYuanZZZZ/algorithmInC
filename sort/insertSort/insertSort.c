@@ -11,7 +11,7 @@ void insertSort(int p[], int len) {
     for (int i = 1; i < len; i++) {   //i从第2个元素开始，第1个元素为有序的序列。
         temp = p[i];                 //储存待比较的元素
         int j = i-1;                 //有序序列中最后一个元素的下标
-        while(j>=0 && p[j]>temp){    //找到待插入的位置,并且移动元素
+        while(j>=0 && temp<p[j]){    //找到待插入的位置,并且移动元素
             p[j+1] = p[j];           //待排序元素的位置空余出来,移动元素
             j--;
         }
@@ -64,7 +64,7 @@ void shellSortSingle(int p[], int len, int dk) {
     for(int i=dk;i<len;i++){//dk 为第一个子序列待排序序列索引
         temp = p[i];
         int j = i-dk;       //j为子序列中有序序列最后一个元素
-        while(j>=0 && p[j]>temp){    //找到待插入的位置,并且移动元素
+        while(j>=0 && temp<p[j]){    //找到待插入的位置,并且移动元素
             p[j+dk] = p[j];           //待排序元素的位置空余出来,移动元素
             j = j-dk;
         }
