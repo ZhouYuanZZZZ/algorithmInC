@@ -20,10 +20,10 @@ typedef struct DynamicStack{
 
 SeqStaticStack* createStaticStack();
 void initSeqStaticStack(SeqStaticStack* stack);
-void pushSeqStaticStack(int elem);
-int popSeqStaticStack();
+void pushSeqStaticStack(SeqStaticStack* stack,int elem);
+int popSeqStaticStack(SeqStaticStack* stack);
 int SeqStaticStackSize(SeqStaticStack* stack);
-int getSeqStaticStackTopElem();
+int getSeqStaticStackTopElem(SeqStaticStack* stack);
 int checkSeqStaticStackEmpty(SeqStaticStack* stack);
 
 #endif //ALGORITHMINC_STACK_H
