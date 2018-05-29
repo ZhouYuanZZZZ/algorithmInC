@@ -18,6 +18,12 @@ typedef struct DynamicStack{
     int stackSize;
 } SeqDynamicStack;
 
+//链栈定义
+typedef struct LinkStackNode{
+    int data;
+    struct LinkStackNode* next;
+}LinkStac;
+
 SeqStaticStack* createStaticStack();
 void initSeqStaticStack(SeqStaticStack* stack);
 void pushSeqStaticStack(SeqStaticStack* stack,int elem);
