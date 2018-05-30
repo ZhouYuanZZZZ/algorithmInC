@@ -68,7 +68,7 @@ void displaySlist(SeqList* list){
     printf("]\n");
 }
 
-int mainseqList() {
+int main() {
 
    int *p = generalRandomIntArray(10,100);
     SeqList * list = initEmptySeqList(10);
