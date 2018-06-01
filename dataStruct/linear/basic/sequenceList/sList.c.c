@@ -28,7 +28,7 @@ int getSlistElemLocation(SeqList *list, int elem) {
     int loc = -1;
     for (int i = 0; i < list->loc; i++) {
         if (*(list->elem + i) == elem) {
-            loc = list->loc;
+            loc = i;
             break;
         }
     }
