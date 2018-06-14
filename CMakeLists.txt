@@ -17,4 +17,9 @@ add_executable(algorithmInC
         dataStruct/linear/basic/single_link_list/sLink.c
         dataStruct/linear/basic/single_link_list/sLink.h
         dataStruct/linear/basic/single_link_list/sLinkTest.c
-        test/test.c dataStruct/linear/basic/sequenceList/sList.h dataStruct/linear/basic/sequenceList/sList.c.c dataStruct/linear/stack/stack.h dataStruct/linear/stack/stack.c dataStruct/linear/queue/queue.c dataStruct/linear/queue/queue.h)
+        test/test.c dataStruct/linear/basic/sequenceList/sList.h
+        dataStruct/linear/basic/sequenceList/sList.c.c
+        dataStruct/linear/stack/stack.h
+        dataStruct/linear/stack/stack.c
+        dataStruct/linear/queue/queue.c
+        dataStruct/linear/queue/queue.h)

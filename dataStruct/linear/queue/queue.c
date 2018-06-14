@@ -19,7 +19,7 @@ int cyclicQueueIsEmpty(CyclicQueue *queue) {
 }
 
 int cyclicQueueIsFull(CyclicQueue *queue) {
-    if ((queue->rear + 1 - queue->front + MAX_SIZE0) % MAX_SIZE0 == queue->front) {
+    if ((queue->rear + 1 - queue->front + MAX_SIZE0) % MAX_SIZE0 == MAX_SIZE0) {
         return 1;
     } else {
         return 0;
