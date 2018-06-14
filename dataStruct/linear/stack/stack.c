@@ -17,18 +17,16 @@ void pushSeqStaticStack(SeqStaticStack* stack,int elem){
     }else{
         stack->data[++stack->top] = elem;
     }
-
 }
 
 int popSeqStaticStack(SeqStaticStack* stack){
 
     if(stack->top < 0){
-        return stack->data[stack->top--];
-    }else{
         printf("Stack empty \n");
-        return -1;
-    }
+    }else{
+        return stack->data[stack->top--];
 
+    }
 }
 
 int SeqStaticStackSize(SeqStaticStack* stack){
@@ -37,10 +35,9 @@ int SeqStaticStackSize(SeqStaticStack* stack){
 
 int getSeqStaticStackTopElem(SeqStaticStack* stack){
     if(stack->top < 0){
-        return stack->data[stack->top];
-    }else{
         printf("Stack empty \n");
-        return -1;
+    }else{
+        return stack->data[stack->top];
     }
 }
 
