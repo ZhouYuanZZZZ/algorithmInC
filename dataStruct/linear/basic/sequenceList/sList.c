@@ -55,7 +55,7 @@ void updateSlist(SeqList* list,int elem,int loc){
 //删除元素
 void deleteSlist(SeqList* list,int loc){
     for(int i=loc;i<=list->loc;i++){
-        *(list->elem+i-1) = *(list->elem+i);
+        *(list->elem+i) = *(list->elem+i+1);
     }
     list->loc--;
 }
@@ -84,7 +84,7 @@ int main() {
     updateSlist(list,777,2);
     displaySlist(list);
 
-    deleteSlist(list,3);
+    deleteSlist(list,2);
     displaySlist(list);
 
     return 0;
