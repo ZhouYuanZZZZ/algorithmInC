@@ -34,7 +34,7 @@ void createLinkedListFromTail(SL L,int a[],int len){
 //将单条数据头插法插入链表中
 void insertDataIntoListHead(SNode * head,int data){
 
-    SNode * node = (SNode *)malloc(sizeof(SNode));
+    SNode* node = (SNode *)malloc(sizeof(SNode));
     node->data = data;
 
     node->next = head->next;
