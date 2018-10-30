@@ -16,6 +16,7 @@ SL createLinkedList() {
     L->next = NULL;
 }
 
+
 //头插法建立链表
 void createLinkedListFromHead(SL L,int a[],int len){
     for (int i = 0; i < len; i++) {

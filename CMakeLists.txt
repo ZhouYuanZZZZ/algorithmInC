@@ -22,4 +22,8 @@ add_executable(algorithmInC
         dataStruct/linear/stack/stack.h
         dataStruct/linear/stack/stack.c
         dataStruct/linear/queue/queue.c
-        dataStruct/linear/queue/queue.h)
+        dataStruct/linear/queue/queue.h
+        dataStruct/linear/basic/doubleLinkedList/doubleLinkedList.c
+        dataStruct/linear/basic/doubleLinkedList/doubleLinkedList.h
+
+        )

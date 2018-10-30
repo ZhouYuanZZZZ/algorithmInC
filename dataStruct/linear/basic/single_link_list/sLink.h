@@ -14,13 +14,12 @@ typedef struct SNode {
 }SNode,* SL;
 
 
-
-// 创建节点，p为节点值
+//创建单链表
 SL createLinkedList();
-
 
 //头插法建立链表
 void createLinkedListFromHead(SL L,int a[],int len);
+
 
 //销毁链表
 void destroyLinkedList(SL L);

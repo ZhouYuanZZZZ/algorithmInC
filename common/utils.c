@@ -16,7 +16,7 @@ int * generalRandomIntArray(int len, int max) {
 }
 
 void showIntArray(int * p, int len) {
-    printf("[ ");
+    printf("[");
     for (int i = 0; i < len; i++) {
         printf("%d ", *(p + i));
     }
@@ -24,7 +24,7 @@ void showIntArray(int * p, int len) {
 }
 
 void showIntArray1(int a[],int len) {
-    printf("[ ");
+    printf("[");
     for (int i = 0; i < len; i++) {
         printf("%d ", a[i]);
     }
