@@ -21,9 +21,11 @@ void inserDSNodetoHead(DSL DL,int elem);
 
 DSNode* inserDSNodetoTail(DSNode* tail,int elem);
 
+DSNode* createDSNode(int elem);
+
 void insertIntoDLinkedList(DSL DL,int index,int elem);
 
-void deleteFromDLinkedList(DSL DL,int index,int elem);
+void deleteFromDLinkedList(DSL DL,int index);
 
 int getDLinkedListLength(DSL DL);
 

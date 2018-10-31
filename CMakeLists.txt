@@ -26,4 +26,4 @@ add_executable(algorithmInC
         dataStruct/linear/basic/doubleLinkedList/doubleLinkedList.c
         dataStruct/linear/basic/doubleLinkedList/doubleLinkedList.h
 
-        )
+        dataStruct/tree/BiTree.h dataStruct/tree/BiTree.c)

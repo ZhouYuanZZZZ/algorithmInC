@@ -112,7 +112,7 @@ void deLinkedQueueAll(LinkedQueue* queue){
     printf("]\n");
 }
 
-int main() {
+int main666() {
 //    CyclicQueue *queue = createCyclicQueue();
 //    initCyclicQueue(queue);
 //    enCyclicQueue(queue, 666);
