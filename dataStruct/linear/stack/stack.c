@@ -42,6 +42,6 @@ int getSeqStaticStackTopElem(SeqStaticStack* stack){
 }
 
 int checkSeqStaticStackEmpty(SeqStaticStack* stack){
-    return stack->top == -1 ?0:1;
+    return stack->top == -1 ?true:false;
 }
 

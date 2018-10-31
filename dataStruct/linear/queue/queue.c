@@ -12,17 +12,17 @@ void initCyclicQueue(CyclicQueue *queue) {
 
 int cyclicQueueIsEmpty(CyclicQueue *queue) {
     if (queue->front == queue->rear) {
-        return 1;
+        return true;
     } else {
-        return 0;
+        return false;
     }
 }
 
 int cyclicQueueIsFull(CyclicQueue *queue) {
     if ((queue->rear + 1 - queue->front + MAX_SIZE0) % MAX_SIZE0 == MAX_SIZE0) {
-        return 1;
+        return true;
     } else {
-        return 0;
+        return false;
     }
 }
 
@@ -73,9 +73,9 @@ void initLinkedQueue(LinkedQueue *queue) {
 
 int linkedQueueIsEmpty(LinkedQueue *queue) {
     if (queue->front == queue->rear) {
-        return 1;
+        return true;
     } else {
-        return 0;
+        return false;
     }
 }
 
@@ -98,11 +98,13 @@ int deLinkedQueue(LinkedQueue *queue) {
             queue->rear = queue->front;
         }
 
+        free(node);
+
         return elem;
     }
 }
 
-void showLinkedQueue(LinkedQueue* queue){
+void deLinkedQueueAll(LinkedQueue* queue){
     printf("[");
     while(!linkedQueueIsEmpty(queue)){
         printf("%d ",deLinkedQueue(queue));
@@ -110,13 +112,15 @@ void showLinkedQueue(LinkedQueue* queue){
     printf("]\n");
 }
 
-int main2256237() {
+int main() {
 //    CyclicQueue *queue = createCyclicQueue();
 //    initCyclicQueue(queue);
 //    enCyclicQueue(queue, 666);
 //    enCyclicQueue(queue, 777);
 //    enCyclicQueue(queue, 888);
+//    enCyclicQueue(queue, 999);
 //    deCyclicQueue(queue);
+//    enCyclicQueue(queue,1);
 //    showCyclicQueue(queue);
 
     LinkedQueue *queue = createLinkedQueue();
@@ -124,8 +128,17 @@ int main2256237() {
     enLinkedQueue(queue, 666);
     enLinkedQueue(queue, 777);
     enLinkedQueue(queue, 888);
-    deLinkedQueue(queue);
-    deLinkedQueue(queue);
-    showLinkedQueue(queue);
+
+    deLinkedQueueAll(queue);
+
+    enLinkedQueue(queue,896);
+    enLinkedQueue(queue,891);
+
+    deLinkedQueueAll(queue);
+
+    for(int i=0;i<100;i++){
+        enLinkedQueue(queue,i);
+    }
+    deLinkedQueueAll(queue);
     return 0;
 }

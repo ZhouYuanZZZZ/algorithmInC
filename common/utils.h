@@ -8,6 +8,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
  int * generalRandomIntArray(int len, int max);
  void showIntArray(int * p, int len);

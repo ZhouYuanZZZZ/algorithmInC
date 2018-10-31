@@ -15,7 +15,7 @@ typedef struct SeqQueueStruct{
 } SeqQueue;
 
 typedef struct CyclicQueueStruct{
-    int data[6];
+    int data[MAX_SIZE0];
     int front,rear;
 } CyclicQueue;
 

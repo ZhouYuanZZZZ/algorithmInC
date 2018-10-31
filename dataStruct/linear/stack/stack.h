@@ -22,7 +22,7 @@ typedef struct DynamicStack{
 typedef struct LinkStackNode{
     int data;
     struct LinkStackNode* next;
-}LinkStac;
+}LinkedStack;
 
 SeqStaticStack* createStaticStack();
 void initSeqStaticStack(SeqStaticStack* stack);
