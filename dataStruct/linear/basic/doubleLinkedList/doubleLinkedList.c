@@ -162,7 +162,7 @@ void showDSL(DSL DL) {
 }
 
 
-int main() {
+int main00d() {
     int *p = generalRandomIntArray(10, 100);
     showIntArray1(p, 10);
 

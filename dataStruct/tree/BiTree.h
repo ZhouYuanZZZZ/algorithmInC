@@ -7,8 +7,10 @@
 #include "../../common/utils.h"
 
 typedef struct BiTNode{
-    int data;
-    struct BiTNode* lChild,* RChild;
+    char data;
+    struct BiTNode* lChild,* rChild;
 } BiTNode,* BiTree;
+
+
 
 #endif //ALGORITHMINC_BITREE_H
