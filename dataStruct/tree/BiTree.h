@@ -11,6 +11,26 @@ typedef struct BiTNode{
     struct BiTNode* lChild,* rChild;
 } BiTNode,* BiTree;
 
+typedef struct BiTNodeStackNode{
+    BiTNode* p;
+    struct BiTNodeStackNode* next;
+}* BiTNodeStackNode ;
+
+typedef struct BiTNodeStack{
+    BiTNodeStackNode nodes;
+}* BiTNodeStack ;
+
+
+
+
+void visitNode(BiTNode* node);
+
+void preOrder(BiTree tree);
+
+void inOrder(BiTree tree);
+
+void postOrder(BiTree tree);
+
 
 
 #endif //ALGORITHMINC_BITREE_H
